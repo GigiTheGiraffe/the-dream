@@ -8,13 +8,15 @@ function getRates()
     $output = json_decode($response, true);
     return $output['conversion_rates'];
 }
-
+$currencies_rates = getRates();
 //fonction pour mettre les iso et les noms des monnaies si ils existent dans les iso de l'API
 function addIsoToSelectOptions($array, $iso_mapping)
 {
+    echo "<option value=\"\">--Veuillez choisir une devise--</option>";
     foreach ($array as $key => $value) {
         if (array_key_exists($key, $iso_mapping)) {
             echo "<option value=\"$key\">$iso_mapping[$key]</option>";
         }
     }
 }
+?>

@@ -1,7 +1,6 @@
 <?php
 include_once "get-currency.php";
-include_once "form-confirmation.php";
-$currencies_rates = getRates();
+include "form-confirmation.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,27 +15,31 @@ $currencies_rates = getRates();
 </head>
 
 <body>
-    <form name="currencyConverter" method="POST">
+    <h1>Convertisseur de devises</h1>
+    <form name="currencyConverter" method="POST" action="">
         <label for="baseCurrencySelect">Quelle est la devise que vous voulez convertir?</label>
         <select name="baseCurrencies" id="baseCurrencySelect">
-            <!-- CREER EN PHP EN PRENANT LES CODES ISO RECU METTRE USD DEVANT TOUT-->
             <?php
             addIsoToSelectOptions($currencies_rates, $isoCountryMapping);
             ?>
         </select>
         <label for="finalCurrencySelect">Dans quelle devise voulez-vous convertir?</label>
         <select name="finalCurrencies" id="finalCurrencySelect">
-            <!-- CREER EN PHP EN PRENANT LES CODES ISO RECU METTRE EUR DEVANT TOUT-->
             <?php
             addIsoToSelectOptions($currencies_rates, $isoCountryMapping);
             ?>
         </select>
         <label for="toConvert" required>Montant?</label>
-        <input type="number" id="toConvert" name="toConvert" step="0.01">
+        <input type="number" id="toConvert" name="toConvert" step="0.01" placeholder="123.88">
         <input type="button" value="Inverser les devises" id="swapCurrencies">
         <input type="submit" value="Submit">
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            formConfirmation($currencies_rates);
+        }
+        ?>
         <input type="reset" value="Remettre à 0">
     </form>
+    <script src="swap-button.js"></script>
 </body>
-
 </html>
