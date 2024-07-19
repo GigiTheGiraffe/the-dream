@@ -22,7 +22,7 @@ Ce projet a pour objectif de créer une page web simple permettant de calculer l
   
 **Calculateur de Taux de Change** : Création d'un formulaire permettant à l'utilisateur de saisir le montant en devise locale et de choisir la devise locale.    
 **Mise à jour des Taux en Temps Réel**  : Récupération des taux de change actuels via une **API externe** pour des conversions précises.  
-**Technologies utilisées**  : **HTML** , **CSS** , **PHP**  pour le traitement des formulaires, et l'API [ExchangeRate-API](https://app.exchangerate-api.com) pour les taux de change.  
+**Technologies utilisées**  : **HTML** , **CSS** , **PHP**, **MySQL**, **PDO**   pour le traitement des formulaires, et l'API [ExchangeRate-API](https://app.exchangerate-api.com) pour les taux de change. Ensuite la création de la database avec **MySQL** et insertion des rates dans la database avec **PDO**.  
 
 ---  
   
@@ -38,8 +38,8 @@ Je suis un jeune développeur en formation chez BeCode, passionné par les techn
 ## Quand  
   
 Durée : 1 jour  
-Date de début : 15/07/24 à 9h  CHANGER DATE
-Date limite : 15/07/24 à 17h  CHANGER DATE
+Date de début : 18/07/24 à 9h
+Date limite : 18/07/24 à 17h
 
 ---  
   
@@ -50,10 +50,11 @@ Date limite : 15/07/24 à 17h  CHANGER DATE
 **HTML & CSS** : Pour la structure et le design de la page.  
 **PHP** : Pour traiter le formulaire et obtenir les données des API.  
 **API de taux de change** : Utilisation de l'API [ExchangeRate-API](https://app.exchangerate-api.com) pour obtenir les taux de change actuels.  
+**MySQL & PDO**: Création et update des rates dans la database.
   
 ### Stratégie de déploiement  
   
-**GitHub Pages** : Pour héberger et déployer la page web. ***TROUVER COMMENT HOST LE SITE*** 
+Aucune pour l'instant.
   
 ### Étapes du projet  
   
@@ -61,7 +62,8 @@ Date limite : 15/07/24 à 17h  CHANGER DATE
 *Traitement du formulaire en PHP* : Écrire un script PHP pour traiter les données soumises et effectuer la conversion.  
 *Intégration de l'API de taux de change* : Utiliser l'API pour obtenir les taux actuels et les afficher.  
 *Amélioration de l'interface utilisateur* : Ajouter des options pour choisir entre différentes devises et un bouton pour inverser les conversions.  
-
+*Enregistrement des rates et des iso dans la database* : Ajouter via requête PDO les rates obtenus via l'API dans la base de données créée avec MySQL.  
+  
 ---
   
 ## Pourquoi
