@@ -1,10 +1,79 @@
-html {
-    min-height: 100%;
-}
 body {
-    text-align: center;
-    width: 90%;
-    height: 50%;
+    font-family: Arial, sans-serif; /* Police moderne et lisible */
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+    background-color: #f4f4f4; /* Couleur de fond légèrement grise */
+    margin: 0;
+    padding: 0;
 }
+
+/* Style du titre */
+h1 {
+    text-align: center; /* Centre le titre */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 20px;
+}
+
+/* Style du formulaire */
 form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff; /* Fond blanc pour le conteneur */
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-top: 20px;
+}
+
+/* Style des labels */
+label {
+    margin-bottom: 8px; /* Espacement sous le label */
+    color: #555; /* Couleur du texte du label */
+    font-weight: bold;
+}
+
+/* Style des éléments select */
+select,
+input[type="number"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Espacement sous chaque élément */
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Style des boutons */
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease; /* Animation pour la couleur de fond */
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style du bouton pour inverser les devises */
+#swapCurrencies {
+    background-color: #28a745; /* Couleur de fond verte */
+}
+
+#swapCurrencies:hover {
+    background-color: #218838; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style des erreurs de validation (si nécessaire) */
+input:invalid {
+    border-color: #dc3545; /* Bordure rouge pour les champs invalides */
 }

@@ -23,14 +23,17 @@ include "form-confirmation.php";
             addIsoToSelectOptions($currencies_rates, $isoCountryMapping);
             ?>
         </select>
+        <br>
         <label for="finalCurrencySelect">Dans quelle devise voulez-vous convertir?</label>
         <select name="finalCurrencies" id="finalCurrencySelect">
             <?php
             addIsoToSelectOptions($currencies_rates, $isoCountryMapping);
             ?>
         </select>
+        <br>
         <label for="toConvert" required>Montant?</label>
         <input type="number" id="toConvert" name="toConvert" step="0.01" placeholder="123.88">
+        <br>
         <input type="button" value="Inverser les devises" id="swapCurrencies">
         <input type="submit" value="Submit">
         <?php
