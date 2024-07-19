@@ -1,79 +1,75 @@
 body {
-    font-family: Arial, sans-serif; /* Police moderne et lisible */
-    line-height: 1.6; /* Améliore la lisibilité du texte */
-    background-color: #f4f4f4; /* Couleur de fond légèrement grise */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Style du titre */
+
 h1 {
-    text-align: center; /* Centre le titre */
-    color: #333; /* Couleur du texte */
+    text-align: center;
+    color: #333;
     margin-bottom: 20px;
 }
 
-/* Style du formulaire */
 form {
     display: flex;
     flex-direction: column;
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    background: #fff; /* Fond blanc pour le conteneur */
+    background: #fff;
     padding: 20px;
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-/* Style des labels */
+.money {
+    color: red;
+}
+
+.reponse {
+    text-align: center;
+}
+
 label {
-    margin-bottom: 8px; /* Espacement sous le label */
-    color: #555; /* Couleur du texte du label */
+    margin-bottom: 8px;
+    color: #555;
     font-weight: bold;
 }
 
-/* Style des éléments select */
-select,
-input[type="number"],
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-    padding: 10px; /* Espacement interne */
-    margin-bottom: 10px; /* Espacement sous chaque élément */
-    border: 1px solid #ddd; /* Bordure grise */
-    border-radius: 4px; /* Coins arrondis */
-    font-size: 16px; /* Taille de la police */
+select, input[type="number"], input[type="button"], input[type="submit"], input[type="reset"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-/* Style des boutons */
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-    background-color: #007bff; /* Couleur de fond bleue */
-    color: #fff; /* Couleur du texte */
-    border: none; /* Supprime la bordure par défaut */
-    cursor: pointer; /* Curseur en forme de main */
-    transition: background-color 0.3s ease; /* Animation pour la couleur de fond */
+input[type="button"], input[type="submit"], input[type="reset"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
 }
 
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #0056b3; 
 }
 
-/* Style du bouton pour inverser les devises */
+
 #swapCurrencies {
-    background-color: #28a745; /* Couleur de fond verte */
+    background-color: #28a745; 
 }
 
 #swapCurrencies:hover {
-    background-color: #218838; /* Couleur de fond plus foncée au survol */
+    background-color: #218838; 
 }
 
-/* Style des erreurs de validation (si nécessaire) */
+
 input:invalid {
-    border-color: #dc3545; /* Bordure rouge pour les champs invalides */
+    border-color: #dc3545;
 }

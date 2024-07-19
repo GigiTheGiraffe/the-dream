@@ -27,7 +27,7 @@ function formConfirmation($rates)
             //Les rates sont données par rapport à l'euro donc il faut le rate de la première devise pour la transformer en euro puis transformer ce rate euro en rate de la nouvelle devise
             $rate = $rates[$finalCurrency] / $rates[$baseCurrency];
             $total = round($rate * $amount, 2);
-            echo "<p>Vos <span class=\"money\">$amount $baseCurrency</span> valent <span class=\"money\">$total $finalCurrency</span>!</p>";
+            echo "<p class=\"reponse\">Vos <span class=\"money\">$amount $baseCurrency</span> valent <span class=\"money\">$total $finalCurrency</span>!</p>";
             unset($_POST);
         }
     }
